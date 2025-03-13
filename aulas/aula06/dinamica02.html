@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>PUCRS - Fundamentos de Sistemas Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto 20px auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        form fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #174578;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #1d5ab7;
+        }
+    </style>
+</head>
+<body>
+
+<h1>PUCRS - Fundamentos de Sistemas Web</h1>
+
+<div class="container">
+
+    <!-- Formulário 1: Informações pessoais -->
+    <form action="https://usebasin.com/f/002f01353f73" method="POST">
+        <fieldset>
+            <legend>Informações pessoais</legend>
+            <p>Formulário 1: Informe nome, e-mail e senha.</p>
+
+            <label for="nome1">Informe o nome:</label>
+            <input type="text" id="nome1" name="Nome" required>
+
+            <label for="email1">Informe o e-mail:</label>
+            <input type="email" id="email1" name="E-mail" placeholder="seuemail@mail.com" required>
+
+            <label for="senha1">Informe a senha:</label>
+            <input type="password" id="senha1" name="Senha" required>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+    <!-- Formulário 2: Petshop -->
+    <form action="https://usebasin.com/f/002f01353f73" method="POST">
+        <fieldset>
+            <legend>Agendamento de Tosa (Petshop)</legend>
+            <p>Formulário 2: Selecione o tipo de animal, quantidade de animais, data para a tosa e dados de contato.</p>
+
+            <label for="tipoAnimal">Selecione o tipo de animal:</label>
+            <select id="tipoAnimal" name="tipoAnimal" required>
+                <option value="">--Selecione--</option>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+            </select>
+
+            <label for="quantidade">Quantidade de animais:</label>
+            <input type="number" id="quantidade" name="Quantidade" min="1" required>
+
+            <label for="dataTosa">Data para a tosa:</label>
+            <input type="date" id="dataTosa" name="Data do agendamento" required>
+
+            <label for="endereco">Endereço (Rua, Número):</label>
+            <input type="text" id="endereco" name="Endereco" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="Cidade" required>
+
+            <label for="email2">E-mail para contato:</label>
+            <input type="email" id="email2" name="E-mail para contato" placeholder="seuemail@mail.com" required>
+
+            <label for="telefone">Telefone para contato:</label>
+            <input type="tel" id="telefone" name="Telefone" placeholder="(00) 00000-0000"
+                   pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$" required>
+
+            <button type="submit">Agendar</button>
+        </fieldset>
+    </form>
+
+</div>
+</body>
+</html>
